@@ -1,0 +1,49 @@
+baseURL = "https://phoenixbyexample.com"
+defaultContentLanguage = "en"
+disqusShortname = ""
+enableEmoji = true
+enableRobotsTXT = true
+googleAnalytics = ""
+languageCode = "en-us"
+pygmentsCodeFences = true
+pygmentsStyle = "native"
+pygmentsUseClasses =  true
+theme = "simplicity"
+title = "Phoenix by Example"
+[author]
+  gravatarEmail = "phoenixbyexample@gmail.com"
+  homepageText = "Phoenix by Example"
+  name = "Mike Zornek"
+  rss = "/posts/index.xml"
+[imaging]
+  anchor = "smart"
+  resampleFilter = "box"
+  quality = 75
+[[menu.pages]]
+  name = "Projects"
+  weight = -100
+  identifier = "projects"
+  url = "/projects/"
+[[menu.pages]]
+  name = "Photos"
+  weight = -90
+  identifier = "photos"
+  url = "/photos/"
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+[params]
+  adsenseClient = ''
+  adsenseSlot = ''
+  description = "A blog about everything."
+  licence = "Copyright 2021 Zorn Labs LLC"
+  displayPostLanguage = true
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+[pygmentsOptions]
+  linenos = false
+[markup.goldmark.renderer]
+  unsafe= true
