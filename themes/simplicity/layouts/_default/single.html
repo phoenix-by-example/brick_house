@@ -18,8 +18,8 @@
     <section>
       {{- .Content -}}
     </section>
+
     <footer>
-      <hr>
       <div class="meta">
         <p class="tags">
           {{ if .Params.tags }}
@@ -31,7 +31,20 @@
           {{ end }}
         </p>
       </div>
-      <hr>
+
+      <section style="text-align: left; padding-top: 1em; border-top: 1px solid #ccc;">  
+        <p>Phoenix by Example provides example applications that help frame educational discussions around Elixir and the Phoenix framework. <strong>Don't miss our next post!</strong></p>
+        
+        <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E9056196308EF5047F5FF64C64384C5BE9B36908CE27660FA7653586590BB2DDC96235F5B050D32CF261C567F64BAA2D0FC1131">
+            
+          <label>Email</label>
+          <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-yuudtiu-yuudtiu" required="" type="email">
+          <button type="submit">Subscribe</button>
+        </form>
+      
+        <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+      </section>
+
       {{ template "_internal/disqus.html" . }}
     </footer>
   </article>

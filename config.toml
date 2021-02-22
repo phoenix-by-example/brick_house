@@ -38,11 +38,11 @@ title = "Phoenix by Example"
 [params]
   adsenseClient = ''
   adsenseSlot = ''
-  description = "A blog about everything."
+  description = "Providing example applications that help frame educational discussions around Elixir and the Phoenix framework."
   licence = "Copyright 2021 Zorn Labs LLC"
   displayPostLanguage = true
 [permalinks]
-  posts = "/:year/:month/:day/:slug/"
+  posts = "/posts/:slug/"
 [pygmentsOptions]
   linenos = false
 [markup.goldmark.renderer]
