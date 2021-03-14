@@ -8,7 +8,7 @@ A place to stack some bricks, aka: the public website for Phoenix by Example.
 
 Make a new post.
 
-    $ hugo new posts/securing-webhook-payload-delivery/index.md
+    $ hugo new posts/retro-taxi-project-kickoff/index.md
 
 Run the server locally.
 
