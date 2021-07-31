@@ -29,7 +29,7 @@ First, we will want the ability to generate a signature based on a payload and a
   end
 
   def generate_payload_signature(payload, app_secret) do
-    {:ok, :crypto.hmac(:sha256, app_secret, payload) |> Base.encode64()}
+    {:ok, :crypto.mac(:hmac, :sha256, app_secret, payload) |> Base.encode16(case: :lower)}
   end
 ```
 
@@ -62,8 +62,11 @@ Finally we'll connect the dots creating a simple call site function where someon
 
   defp is_payload_signature_valid?(payload_signature, payload) do
     case generate_payload_signature(payload, webhook_secret()) do
-      {:ok, ^payload_signature} -> true
-      _ -> false
+      {:ok, generated_payload_signature} ->
+        Plug.Crypto.secure_compare(generated_payload_signature, payload_signature)
+
+      _ ->
+        false
     end
   end
 
