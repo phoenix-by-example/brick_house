@@ -1,32 +1,10 @@
-{{ define "main" }}
-  <article>
-    <section>
-      <img
-      class="homepage-avatar"
-      src="https://www.gravatar.com/avatar/{{ md5 .Site.Author.gravataremail }}?s=100&d=identicon"
-      >
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
 
-      <h1>Phoenix by Example</h1>
+<head>
+  <meta http-equiv="Refresh" content="0; url='{{ .Params.redirect }}'" />
+</head>
 
-      <p>Providing example applications that help frame educational discussions<br/>
-      around Elixir and the Phoenix framework.</p>
-        
-      <ul>
-        {{ range first 7 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> | <time>{{ .Date.Format "Jan 2, 2006" }}</time></li>
-        {{ end }}
-     </ul>
+<body></body>
 
-     <p><strong>Current Open Source Projects</strong><br/>
-      <a href="https://github.com/phoenix-by-example/greeter">Greeter, a hello world tutorial</a> • <a href="https://github.com/phoenix-by-example/get_shorty">GetShorty, a link shortner</a></p>
-      
-      
-      <p><strong>Subscribe</strong> via: <a href="https://twitter.com/phoenixexamples">Twitter</a> / <a href="https://www.youtube.com/channel/UC1A6NCyogLWT7t4K3TuVQ4g">YouTube</a> / <a href="https://confirmsubscription.com/h/t/364AEC96E229EF56">Email</a></p>
-      
-      <p><strong>About</strong><br/>
-      Made with ❤️ by <a href="http://twitter.com/zorn">@zorn</a>.</p>
-
-
-    </section>
-  </article>
-{{ end }}
+</html>
